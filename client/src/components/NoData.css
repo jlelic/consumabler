@@ -1,0 +1,14 @@
+.no-data a {
+    color: #b1dfeb;
+}
+
+.no-data{
+    font-size: 1.5em;
+    display: inline-block;
+    padding-right: 40px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    background-image: url('../images/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}

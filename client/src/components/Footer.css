@@ -1,0 +1,65 @@
+.footer {
+    margin-top: 30px;
+    background-color: #070209;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position:absolute;
+    bottom:0;
+    width:100%;
+    min-height:60px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.powered-by {
+    display: inline-block;
+    padding-left: 13px;
+    font-size: 14px;
+}
+
+.made-by {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.nexushub {
+    height: 24px;
+    margin: 0px 6px;
+    position: relative;
+    top: 7px;
+}
+
+.warcraftlogs {
+    height: 32px;
+    margin-left: 7px;
+    position: relative;
+    top: 11px;
+}
+
+.wowhead {
+    height: 29px;
+    position: relative;
+    top: 7px;
+}
+
+
+.tempus {
+    position: relative;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border-radius: 20px;
+    content: url('../images/tempus.png');
+    transition: all 2s;
+}
+
+.tempus:hover {
+    height: 64px;
+    width: 64px;
+    content: url('../images/tempus.gif');
+}

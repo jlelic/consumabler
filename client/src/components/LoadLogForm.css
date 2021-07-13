@@ -1,0 +1,39 @@
+.loadLogForm {
+    padding: 5px 0px 5px 20px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.enter-code {
+    text-align: left;
+}
+
+.button {
+    background-color: #37a43d;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    margin-left: 2px;
+}
+
+.button:hover {
+    background-color: #5dc55e;
+}
+
+.button.loading {
+    background-color: #5a536d;
+}
