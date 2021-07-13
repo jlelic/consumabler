@@ -1,0 +1,26 @@
+.report-info {
+    border-top: groove 4px black;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: rgb(33, 31, 39);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 0.8em;
+}
+
+.title {
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: #d7daee;
+}
+
+.alliance {
+    color: #69f
+}
+
+.horde {
+    color: #e02929
+}
+

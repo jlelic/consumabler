@@ -1,0 +1,196 @@
+.App {
+    text-align: center;
+    color: white;
+    background-color: #20232a;
+    margin: auto;
+}
+
+.container {
+    margin: auto;
+    display: inline-block;
+    min-width: 900px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-image: url('./images/logo.svg');
+    background-repeat: no-repeat;
+    background-color: #070209;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.expansion {
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    left: 350px;
+    bottom: 2px;
+}
+
+.alpha {
+    position: absolute;
+    user-select: none;
+    top: 10px;
+    left: 390px;
+}
+
+.tbc {
+    letter-spacing: 3px;
+    user-select: none;
+    color: #c8d3af;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+
+.money-gold, .money-silver, .money-copper {
+    color: white;
+    background: no-repeat right center;
+    background-position: bottom 2px right 0px;
+    padding-right: 15px;
+    margin-left: 5px;
+}
+
+.money-gold {
+    background-image: url("images/money-gold.gif")
+}
+
+.money-silver {
+    background-image: url("images/money-silver.gif")
+}
+
+.money-copper {
+    background-image: url("images/money-copper.gif")
+}
+
+.class-Druid {
+    background-image: url("images/class/druid.jpg")
+}
+
+.class-Hunter {
+    background-image: url("images/class/hunter.jpg")
+}
+
+.class-Mage {
+    background-image: url("images/class/mage.jpg")
+}
+
+.class-Paladin {
+    background-image: url("images/class/paladin.jpg")
+}
+
+.class-Priest {
+    background-image: url("images/class/priest.jpg")
+}
+
+.class-Rogue {
+    background-image: url("images/class/rogue.jpg")
+}
+
+.class-Shaman {
+    background-image: url("images/class/shaman.jpg")
+}
+
+.class-Warrior {
+    background-image: url("images/class/warrior.jpg")
+}
+
+.class-Warlock {
+    background-image: url("images/class/warlock.jpg")
+}
+
+.class-name-Druid {
+    color: #FF7C0A;
+}
+
+.class-name-Druid {
+    color: #FF7C0A
+}
+
+.class-name-Hunter {
+    color: #AAD372
+}
+
+.class-name-Mage {
+    color: #3FC7EB
+}
+
+.class-name-Monk {
+    color: #00FF98
+}
+
+.class-name-Paladin {
+    color: #F48CBA
+}
+
+.class-name-Priest {
+    color: #FFFFFF
+}
+
+.class-name-Rogue {
+    color: #FFF468
+}
+
+.class-name-Shaman {
+    color: #0070DD
+}
+
+.class-name-Warlock {
+    color: #8788EE
+}
+
+.class-name-Warrior {
+    color: #C69B6D
+}
+
+.class-icon {
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.consumable-brief {
+    margin-right: 20px;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

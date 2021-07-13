@@ -1,0 +1,184 @@
+{
+    "casts": {
+        "17531": {
+            "name": "Major Mana Potion",
+            "itemId": 13444
+        },
+        "17530": {
+            "name": "Superior Mana Potion",
+            "itemId": 13443
+        },
+        "28499": {
+            "name": "Super Mana Potion",
+            "itemId": 22832
+        },
+        "27869": {
+            "name": "Dark Rune",
+            "itemId": 20520
+        },
+        "16666": {
+            "name": "Demonic Rune",
+            "itemId": 12662,
+            "priceBy": 20520
+        },
+        "35476": {
+            "name": "Drums of Battle",
+            "itemId": 29529,
+            "charges": 50
+        },
+        "38929": {
+            "name": "Fel Mana Potion",
+            "itemId": 31677
+        },
+        "17540": {
+            "name": "Greater Stoneshield Potion",
+            "itemId": 13455
+        },
+        "28507": {
+            "name": "Haste Potion",
+            "itemId": 22838
+        },
+        "28515": {
+            "name": "Ironshield Potion",
+            "itemId": 22849
+        },
+        "9512": {
+            "name": "Thistle Tea",
+            "itemId": 7676
+        }
+    },
+    "buffs": {
+        "33721": {
+            "name": "Adept's Elixir",
+            "itemId": 28103,
+            "duration": 60
+        },
+        "11406": {
+            "name": "Elixir of Demonslaying",
+            "itemId": 9224,
+            "duration": 5
+        },
+        "39627": {
+            "name": "Elixir of Draenic Wisdom",
+            "itemId": 32067,
+            "duration": 60
+        },
+        "28497": {
+            "name": "Elixir of Major Agility",
+            "itemId": 22831,
+            "duration": 60
+        },
+        "28509": {
+            "name": "Elixir of Major Mageblood",
+            "itemId": 22840,
+            "duration": 60
+        },
+        "28503": {
+            "name": "Elixir of Major Shadow Power",
+            "itemId": 22835,
+            "duration": 60
+        },
+        "28491": {
+            "name": "Elixir of Healing Power",
+            "itemId": 22825,
+            "duration": 60
+        },
+        "39625": {
+            "name": "Elixir of Major Fortitude",
+            "itemId": 32062,
+            "duration": 60
+        },
+        "28502": {
+            "name": "Elixir of Major Armor",
+            "itemId": 22834,
+            "duration": 60
+        },
+        "38954": {
+            "name": "Fel Strength Elixir",
+            "itemId": 31679,
+            "duration": 60
+        },
+        "28521": {
+            "name": "Flask of Blinding Light",
+            "itemId": 22861,
+            "duration": 120,
+            "persistsDeath": true
+        },
+        "28518": {
+            "name": "Flask of Fortification",
+            "itemId": 22851,
+            "duration": 120,
+            "persistsDeath": true
+        },
+        "28520": {
+            "name": "Flask of Relentless Assault",
+            "itemId": 22854,
+            "duration": 120,
+            "persistsDeath": true
+        },
+        "28540": {
+            "name": "Flask of Pure Death",
+            "itemId": 22866,
+            "duration": 120,
+            "persistsDeath": true
+        },
+        "11371": {
+            "name": "Gift of Arthas",
+            "itemId": 9088,
+            "duration": 30
+        },
+        "33082": {
+            "name": "Scroll of Strength V",
+            "itemId": 27503,
+            "duration": 30
+        },
+        "33077": {
+            "name": "Scroll of Agility V",
+            "itemId": 27498,
+            "duration": 30
+        },
+        "33079": {
+            "name": "Scroll of Protection V",
+            "itemId": 27500,
+            "duration": 30
+        },
+        "33263": {
+            "name": "Blackened Basilisk",
+            "itemId": 27657,
+            "duration": 30,
+            "note": "Could be any spell power food"
+        },
+        "33256": {
+            "name": "Roasted Clefthoof",
+            "itemId": 27658,
+            "duration": 30
+        },
+        "33268": {
+            "name": "Golden Fish Sticks",
+            "itemId": 27666,
+            "duration": 30
+        },
+        "33254": {
+            "name": "Buzzard Bites",
+            "itemId": 27651,
+            "duration": 30,
+            "note": "Could be any spirit buff food"
+        },
+        "33261": {
+            "name": "Grilled Mudfish",
+            "itemId": 27664,
+            "duration": 30,
+            "note": "Could be any agility buff food"
+        },
+        "43764": {
+            "name": "Spicy Hot Talbuk",
+            "itemId": 33872,
+            "duration": 30
+        },
+        "33257": {
+            "name": "Spicy Crawdad",
+            "itemId": 27667,
+            "duration": 30
+        }
+    }
+}

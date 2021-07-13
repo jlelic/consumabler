@@ -1,0 +1,43 @@
+.disclaimer {
+    padding: 10px;
+    color: #660007;
+    padding-right: 30px;
+    width: 750px;
+    background-color: #ffa700;
+    text-align: left;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.read-more {
+    font-weight: bolder;
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+
+.disclaimer a {
+    color: #00045a;
+}
+
+.close-button {
+    cursor: pointer;
+    font-family: sans-serif;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 14px;
+    width: 14px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2px;
+    padding-bottom: 8px;
+    background-image: url('../images/close-button.svg');
+    transition: all 0.2s;
+}
+
+.close-button:hover {
+    opacity: 0.6;
+}
