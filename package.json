@@ -4,9 +4,6 @@
   "scripts": {
     "postinstall": "cd client && npm install && cd ../server && npm install",
     "build": "cd client && npm run build",
-    "start": "concurrently \"cd client && npm run start\" \"node ./server/index.js\""
-  },
-  "dependencies": {
-    "concurrently": "^6.2.0"
+    "start": "node ./server/index.js"
   }
 }
