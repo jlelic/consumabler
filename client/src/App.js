@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import logo from './logo.svg';
 import './App.css';
 import LoadLogForm from './components/LoadLogForm'
 import PlayerTable from './components/PlayerTable'
