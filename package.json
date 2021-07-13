@@ -2,6 +2,11 @@
   "name": "consumabler",
   "version": "0.0.1",
   "scripts": {
-    "postinstall": "cd client && npm install && cd ../server && npm install"
+    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "start": "concurrently \"cd client && npm run start\" \"node ./server/index.js\""
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0"
   }
 }

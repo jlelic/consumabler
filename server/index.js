@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3001
 const graphqlClient = require('graphql-client')
 const fetch = require('node-fetch')
+const path = require('path')
+const config = require('./config') || {}
+const port = process.env.PORT || 3001
 
 const {byEffectId: consumableEffects, byItemId: consumableItems} = require('../client/src/shared/consumables')
 
@@ -10,6 +12,7 @@ const wlogsEndpoint = 'https://classic.warcraftlogs.com/api/v2/client'
 const apiClient = graphqlClient({
     url: wlogsEndpoint,
     headers: {
+        authorization: `Bearer ${config.wlogs_token || process.env.wlogs_token}`,
     },
 });
 
@@ -125,6 +128,12 @@ const getPrices = async (server, faction) => {
 
 app.listen(port, () => console.log(`Listening on port ${port}`))
 
+
+if (process.env.NODE_ENV === 'production') {
+    const distPath = path.resolve(__dirname, '../client/build');
+    app.use(express.static(distPath));
+}
+
 app.get('/consumables_report/:code', async (req, res) => {
     // res.send(dummyData)
     // return
@@ -168,7 +177,6 @@ app.get('/consumables_report/:code', async (req, res) => {
   }
 }
         `)
-
         const {masterData, startTime, endTime, guild: guildInfo, zone: {name: zoneName}, title: reportTitle, owner: {name: ownerName}} = masterDataResult.data.reportData.report
         guild = guildInfo && guildInfo.name
         zone = zoneName
@@ -352,8 +360,6 @@ app.get('/consumables_report/:code', async (req, res) => {
     // console.log(playerData)
     console.log('done')
 
-    console.log(faction)
-    console.log(server)
     res.send({reportCode: code, faction, server, owner, guild, date, title, zone, playerData, prices})
 })
 
