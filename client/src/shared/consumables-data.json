@@ -126,6 +126,12 @@
             "duration": 120,
             "persistsDeath": true
         },
+        "28519": {
+            "name": "Flask of Mighty Restoration",
+            "itemId": 22853,
+            "duration": 120,
+            "persistsDeath": true
+        },
         "28520": {
             "name": "Flask of Relentless Assault",
             "itemId": 22854,
