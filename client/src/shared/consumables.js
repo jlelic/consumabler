@@ -9,5 +9,9 @@ Object.keys(byEffectId.casts).forEach(castId => {
     const cast = byEffectId.casts[castId]
     byItemId[cast.itemId] = cast
 })
+Object.keys(byEffectId.enchants).forEach(enchantId => {
+    const cast = byEffectId.enchants[enchantId]
+    byItemId[cast.itemId] = cast
+})
 
 module.exports = {byEffectId, byItemId}

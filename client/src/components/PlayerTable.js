@@ -7,8 +7,10 @@ import ArrowDown from '../images/arrow-down.svg'
 import ArrowUp from '../images/arrow-up.svg'
 import './Table.css'
 import './PlayerTable.css'
+import './SpecIcons.css'
 
 import ConsumableCell from "./ConsumableCell";
+import {roleInfo} from "../Utils";
 
 
 export default function PlayerTable({data}) {
@@ -458,6 +460,25 @@ export default function PlayerTable({data}) {
         ],
         []
     )
+
+    const roleColSorter = React.useMemo(() => (rowA, rowB, id, desc) => {
+        if (!rowA || !rowB) {
+            return 0
+        }
+        const roleDiff = roleInfo[rowB.original.icon].order - roleInfo[rowA.original.icon].order
+        if (roleDiff === 0) {
+            return rowA.original.name.localeCompare(rowB.original.name)
+        }
+        return roleDiff
+    })
+
+    const consumableColSorter = React.useMemo(() => (rowA, rowB, id, desc) => {
+        if (!rowA || !rowB) {
+            return 0
+        }
+        return rowA.original[id].length - rowB.original[id].length
+    })
+
     const [reportCode, setReportCode] = useState(null)
 
     if (reportCode !== data.reportCode) {
@@ -467,15 +488,16 @@ export default function PlayerTable({data}) {
     const columns = React.useMemo(
         () => [
             {
-                Header: 'Class',
-                accessor: 'class',
-                Cell: ({value}) => <div className={`class-icon class-${value}`}/>
+                Header: 'Role',
+                accessor: 'icon',
+                Cell: ({value}) => <div><img className={`role-icon role-${value}`} title={roleInfo[value].note}/></div>,
+                sortType: roleColSorter,
             },
             {
                 Header: 'Name',
                 accessor: 'name',
-                Cell: ({row, value}) => {
-                    return <div className={`name-cell class-name-${row.values.class}`}>
+                Cell: ({value, row}) => {
+                    return <div className={`name-cell class-name-${row.original.class}`}>
                         {value}
                     </div>
                 }
@@ -484,9 +506,9 @@ export default function PlayerTable({data}) {
                 Header: 'Consumables',
                 accessor: 'consumed',
                 Cell: ({value, row}) => {
-                    console.log(data)
                     return <ConsumableCell row={row} expandedRowId={expandedRowId} value={value} prices={data.prices}/>
-                }
+                },
+                sortType: consumableColSorter,
             },
             {
                 Header: 'Spent',

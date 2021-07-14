@@ -17,7 +17,11 @@
 }
 
 .disclaimer a {
-    color: #00045a;
+    color: #00045a!important;
+}
+
+.disclaimer ul {
+    list-style: square;
 }
 
 .close-button {

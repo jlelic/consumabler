@@ -1,0 +1,322 @@
+.role-icon {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    content: url('../images/roles.jpg');
+    border-radius: 3px;
+}
+
+.role-Boss {
+    -o-object-position: calc(0px * 20) 0;
+    object-position: calc(0px * 20) 0
+}
+
+.role-DeathKnight-Blood {
+    -o-object-position: calc(-1px * 20) 0;
+    object-position: calc(-1px * 20) 0
+}
+
+.role-DeathKnight-Frost {
+    -o-object-position: calc(-2px * 20) 0;
+    object-position: calc(-2px * 20) 0
+}
+
+.role-DeathKnight-Melee {
+    -o-object-position: calc(-3px * 20) 0;
+    object-position: calc(-3px * 20) 0
+}
+
+.role-DeathKnight-Unholy {
+    -o-object-position: calc(-4px * 20) 0;
+    object-position: calc(-4px * 20) 0
+}
+
+.role-DeathKnight {
+    -o-object-position: calc(-5px * 20) 0;
+    object-position: calc(-5px * 20) 0
+}
+
+.role-DemonHunter-Havoc {
+    -o-object-position: calc(-6px * 20) 0;
+    object-position: calc(-6px * 20) 0
+}
+
+.role-DemonHunter-Vengeance {
+    -o-object-position: calc(-7px * 20) 0;
+    object-position: calc(-7px * 20) 0
+}
+
+.role-DemonHunter {
+    -o-object-position: calc(-8px * 20) 0;
+    object-position: calc(-8px * 20) 0
+}
+
+.role-Druid-Balance {
+    -o-object-position: calc(-9px * 20) 0;
+    object-position: calc(-9px * 20) 0
+}
+
+.role-Druid-Warden {
+    -o-object-position: calc(-10px * 20) 0;
+    object-position: calc(-10px * 20) 0
+}
+
+.role-Druid-Feral {
+    -o-object-position: calc(-11px * 20) 0;
+    object-position: calc(-11px * 20) 0
+}
+
+.role-Druid-Guardian {
+    -o-object-position: calc(-12px * 20) 0;
+    object-position: calc(-12px * 20) 0
+}
+
+.role-Druid-Restoration {
+    -o-object-position: calc(-13px * 20) 0;
+    object-position: calc(-13px * 20) 0
+}
+
+.role-Druid {
+    -o-object-position: calc(-14px * 20) 0;
+    object-position: calc(-14px * 20) 0
+}
+
+.role-Hunter-BeastMastery {
+    -o-object-position: calc(-15px * 20) 0;
+    object-position: calc(-15px * 20) 0
+}
+
+.role-Hunter-Marksmanship {
+    -o-object-position: calc(-16px * 20) 0;
+    object-position: calc(-16px * 20) 0
+}
+
+.role-Hunter-Ranged {
+    -o-object-position: calc(-17px * 20) 0;
+    object-position: calc(-17px * 20) 0
+}
+
+.role-Hunter-Survival {
+    -o-object-position: calc(-18px * 20) 0;
+    object-position: calc(-18px * 20) 0
+}
+
+.role-Hunter {
+    -o-object-position: calc(-19px * 20) 0;
+    object-position: calc(-19px * 20) 0
+}
+
+.role-Mage-Arcane {
+    -o-object-position: calc(-20px * 20) 0;
+    object-position: calc(-20px * 20) 0
+}
+
+.role-Mage-Fire {
+    -o-object-position: calc(-21px * 20) 0;
+    object-position: calc(-21px * 20) 0
+}
+
+.role-Mage-Frost {
+    -o-object-position: calc(-22px * 20) 0;
+    object-position: calc(-22px * 20) 0
+}
+
+.role-Mage-Ranged {
+    -o-object-position: calc(-23px * 20) 0;
+    object-position: calc(-23px * 20) 0
+}
+
+.role-Mage {
+    -o-object-position: calc(-24px * 20) 0;
+    object-position: calc(-24px * 20) 0
+}
+
+.role-Monk-Brewmaster {
+    -o-object-position: calc(-25px * 20) 0;
+    object-position: calc(-25px * 20) 0
+}
+
+.role-Monk-Mistweaver {
+    -o-object-position: calc(-26px * 20) 0;
+    object-position: calc(-26px * 20) 0
+}
+
+.role-Monk-Windwalker {
+    -o-object-position: calc(-27px * 20) 0;
+    object-position: calc(-27px * 20) 0
+}
+
+.role-Monk {
+    -o-object-position: calc(-28px * 20) 0;
+    object-position: calc(-28px * 20) 0
+}
+
+.role-NPC {
+    -o-object-position: calc(-29px * 20) 0;
+    object-position: calc(-29px * 20) 0
+}
+
+.role-Paladin-Holy {
+    -o-object-position: calc(-30px * 20) 0;
+    object-position: calc(-30px * 20) 0
+}
+
+.role-Paladin-Protection {
+    -o-object-position: calc(-31px * 20) 0;
+    object-position: calc(-31px * 20) 0
+}
+
+.role-Paladin-Retribution {
+    -o-object-position: calc(-32px * 20) 0;
+    object-position: calc(-32px * 20) 0
+}
+
+.role-Paladin {
+    -o-object-position: calc(-33px * 20) 0;
+    object-position: calc(-33px * 20) 0
+}
+
+.role-Pet {
+    -o-object-position: calc(-34px * 20) 0;
+    object-position: calc(-34px * 20) 0
+}
+
+.role-Priest-Discipline {
+    -o-object-position: calc(-35px * 20) 0;
+    object-position: calc(-35px * 20) 0
+}
+
+.role-Priest-Healing {
+    -o-object-position: calc(-36px * 20) 0;
+    object-position: calc(-36px * 20) 0
+}
+
+.role-Priest-Holy {
+    -o-object-position: calc(-37px * 20) 0;
+    object-position: calc(-37px * 20) 0
+}
+
+.role-Priest-Shadow {
+    -o-object-position: calc(-38px * 20) 0;
+    object-position: calc(-38px * 20) 0
+}
+
+.role-Priest-Smiter {
+    -o-object-position: calc(-39px * 20) 0;
+    object-position: calc(-39px * 20) 0
+}
+
+.role-Priest {
+    -o-object-position: calc(-40px * 20) 0;
+    object-position: calc(-40px * 20) 0
+}
+
+.role-Rogue-Assassination {
+    -o-object-position: calc(-41px * 20) 0;
+    object-position: calc(-41px * 20) 0
+}
+
+.role-Rogue-Combat {
+    -o-object-position: calc(-42px * 20) 0;
+    object-position: calc(-42px * 20) 0
+}
+
+.role-Rogue-Melee {
+    -o-object-position: calc(-43px * 20) 0;
+    object-position: calc(-43px * 20) 0
+}
+
+.role-Rogue-Outlaw {
+    -o-object-position: calc(-44px * 20) 0;
+    object-position: calc(-44px * 20) 0
+}
+
+.role-Rogue-Subtlety {
+    -o-object-position: calc(-45px * 20) 0;
+    object-position: calc(-45px * 20) 0
+}
+
+.role-Rogue {
+    -o-object-position: calc(-46px * 20) 0;
+    object-position: calc(-46px * 20) 0
+}
+
+.role-Shaman-Elemental {
+    -o-object-position: calc(-47px * 20) 0;
+    object-position: calc(-47px * 20) 0
+}
+
+.role-Shaman-Enhancement {
+    -o-object-position: calc(-48px * 20) 0;
+    object-position: calc(-48px * 20) 0
+}
+
+.role-Shaman-Restoration {
+    -o-object-position: calc(-49px * 20) 0;
+    object-position: calc(-49px * 20) 0
+}
+
+.role-Shaman {
+    -o-object-position: calc(-50px * 20) 0;
+    object-position: calc(-50px * 20) 0
+}
+
+.role-Warlock-Affliction {
+    -o-object-position: calc(-51px * 20) 0;
+    object-position: calc(-51px * 20) 0
+}
+
+.role-Warlock-Demonology {
+    -o-object-position: calc(-52px * 20) 0;
+    object-position: calc(-52px * 20) 0
+}
+
+.role-Warlock-Destruction {
+    -o-object-position: calc(-53px * 20) 0;
+    object-position: calc(-53px * 20) 0
+}
+
+.role-Warlock-Ranged {
+    -o-object-position: calc(-54px * 20) 0;
+    object-position: calc(-54px * 20) 0
+}
+
+.role-Warlock {
+    -o-object-position: calc(-55px * 20) 0;
+    object-position: calc(-55px * 20) 0
+}
+
+.role-Warrior-Arms {
+    -o-object-position: calc(-56px * 20) 0;
+    object-position: calc(-56px * 20) 0
+}
+
+.role-Warrior-Fury {
+    -o-object-position: calc(-57px * 20) 0;
+    object-position: calc(-57px * 20) 0
+}
+
+.role-Warrior-Gladiator {
+    -o-object-position: calc(-58px * 20) 0;
+    object-position: calc(-58px * 20) 0
+}
+
+.role-Warrior-Melee {
+    -o-object-position: calc(-59px * 20) 0;
+    object-position: calc(-59px * 20) 0
+}
+
+.role-Warrior-Protection {
+    -o-object-position: calc(-60px * 20) 0;
+    object-position: calc(-60px * 20) 0
+}
+
+.role-Warrior-Champion, .role-Warrior-Warden {
+    -o-object-position: calc(-61px * 20) 0;
+    object-position: calc(-61px * 20) 0
+}
+
+.role-Warrior {
+    -o-object-position: calc(-62px * 20) 0;
+    object-position: calc(-62px * 20) 0
+}

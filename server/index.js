@@ -105,11 +105,6 @@ const dummyData = {
 
 const castConsumableIdSet = new Set(Object.keys(consumableEffects.casts).map(castId => ~~castId))
 const buffConsumableIdSet = new Set(Object.keys(consumableEffects.buffs).map(buffId => ~~buffId))
-const itemConsumableIdSet = new Set(
-    Object.values(consumableEffects.casts).map(c => c.itemId)
-        .concat(
-            Object.values(consumableEffects.buffs).map(c => c.itemId)
-        ))
 
 const asyncForEach = async (array, callback) => {
     for (let index = 0; index < array.length; index++) {
@@ -125,7 +120,7 @@ const getPrices = async (server, faction) => {
     const {data} = json
     const prices = {}
     data.forEach(item => {
-        if (itemConsumableIdSet.has(item.itemId)) {
+        if (consumableItems[item.itemId]) {
             prices[item.itemId] = item.marketValue
         }
     })
@@ -170,6 +165,7 @@ app.get('/consumables_report/:code', async (req, res) => {
       }
       masterData {
         actors {
+          icon,
           name,
           id,
           type,
@@ -189,8 +185,8 @@ app.get('/consumables_report/:code', async (req, res) => {
         title = reportTitle
         date = startTime
         owner = ownerName
-        masterData.actors.forEach(({id, name, type, subType, server: serverName}) => {
-            masterTable[id] = {name, type, class: subType}
+        masterData.actors.forEach(({id, name, type, subType, icon, server: serverName}) => {
+            masterTable[id] = {name, type, class: subType, icon }
             casts[id] = {}
             if (serverName) {
                 server = serverName
@@ -229,19 +225,18 @@ app.get('/consumables_report/:code', async (req, res) => {
                 // console.log(event)
                 if (event.type === 'cast') {
                     const castId = event.abilityGameID;
-                    if (event.sourceID === 7 && event.abilityGameID === 28499) {
-                        console.log('Mho used Mana pot')
-                    }
                     if (castConsumableIdSet.has(castId)) {
                         casts[event.sourceID][castId] = casts[event.sourceID][castId] || 0
                         casts[event.sourceID][castId]++
                     }
                 } else if (event.type === 'combatantinfo') {
                     const {auras, faction: playerFaction, gear, sourceID: playerId, timestamp} = event
-                    if (playerFaction === 1) {
-                        faction = 'alliance'
-                    } else if (playerFaction === 0) {
-                        faction = 'horde'
+                    if (!faction) {
+                        if (playerFaction === 1) {
+                            faction = 'alliance'
+                        } else if (playerFaction === 0) {
+                            faction = 'horde'
+                        }
                     }
                     buffs[playerId] = buffs[playerId] || {}
                     const playerBuffs = buffs[playerId]
@@ -260,6 +255,25 @@ app.get('/consumables_report/:code', async (req, res) => {
                                 buff.count++
                                 buff.startTime = timestamp
                                 buff.active = true
+                            }
+                        }
+                    })
+                    gear.forEach(item => {
+                        const enchantId = item.temporaryEnchant
+                        if(enchantId && consumableEffects.enchants[enchantId]) {
+                            const buff = playerBuffs[enchantId]
+                            const enchantInfo = consumableEffects.enchants[enchantId]
+                            if (buff && timestamp - buff.startTime > enchantInfo.duration * 60 * 1000) {
+                                buff.count++
+                                buff.startTime = timestamp
+                                buff.active = true
+                            } else {
+                                playerBuffs[enchantId] = {
+                                    startTime: timestamp,
+                                    itemId: enchantInfo.itemId,
+                                    count: 1,
+                                    isEnchant: true
+                                }
                             }
                         }
                     })
@@ -304,6 +318,9 @@ app.get('/consumables_report/:code', async (req, res) => {
                         return
                     }
                     Object.keys(playerBuffs).forEach(buffId => {
+                        if(playerBuffs[buffId].isEnchant) {
+                            return
+                        }
                         if (consumableEffects.buffs[buffId].persistsDeath) {
                             return
                         }
@@ -342,7 +359,7 @@ app.get('/consumables_report/:code', async (req, res) => {
         })
         try {
             Object.entries(buffs[playerId]).forEach(([buffId, buffData]) => {
-                const consumable = consumableEffects.buffs[buffId]
+                const consumable = consumableEffects[buffData.isEnchant ? 'enchants' : 'buffs'][buffId]
                 const {itemId} = consumable
                 spentOn[itemId] = prices[consumable.priceBy || itemId] * buffData.count / (consumable.charges || 1)
                 spent += spentOn[itemId]
@@ -357,6 +374,7 @@ app.get('/consumables_report/:code', async (req, res) => {
         const playerRecord = {
             name: masterTable[playerId].name,
             class: masterTable[playerId].class,
+            icon: masterTable[playerId].icon,
             consumed,
             spent: Math.round(spent)
         }

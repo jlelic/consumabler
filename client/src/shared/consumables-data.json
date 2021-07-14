@@ -12,6 +12,10 @@
             "name": "Super Mana Potion",
             "itemId": 22832
         },
+        "28517": {
+            "name": "Super Rejuvenation Potion",
+            "itemId": 22850
+        },
         "27869": {
             "name": "Dark Rune",
             "itemId": 20520
@@ -34,9 +38,21 @@
             "name": "Greater Stoneshield Potion",
             "itemId": 13455
         },
+        "28508": {
+            "name": "Destruction Potion",
+            "itemId": 22914
+        },
         "28507": {
             "name": "Haste Potion",
             "itemId": 22838
+        },
+        "28506": {
+            "name": "Potion of Heroes",
+            "itemId": 22837
+        },
+        "28494": {
+            "name": "Insane Strength Potion",
+            "itemId": 22828
         },
         "28515": {
             "name": "Ironshield Potion",
@@ -179,6 +195,95 @@
             "name": "Spicy Crawdad",
             "itemId": 27667,
             "duration": 30
+        },
+        "43730": {
+            "name": "Stormchops",
+            "itemId": 33866,
+            "duration": 30
+        }
+    },
+    "enchants": {
+        "2713": {
+            "name": "Adamantite Sharpening Stone",
+            "itemId": 23529,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "2955": {
+            "name": "Adamantite Weightstone",
+            "itemId": 28421,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "1643": {
+            "name": "Dense Sharpening Stone",
+            "itemId": 12404,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "1703": {
+            "name": "Dense Weightstone",
+            "itemId": 12643,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "2506": {
+            "name": "Elemental Sharpening Stone",
+            "itemId": 18262,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "2712": {
+            "name": "Fel Sharpening Stone",
+            "itemId": 23528,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "2954": {
+            "name": "Fel Weightstone",
+            "itemId": 28420,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "2629": {
+            "name": "Brilliant Mana Oil",
+            "itemId": 20748,
+            "duration": 60,
+            "persistsDeath": true,
+            "charges": 5
+        },
+        "2628": {
+            "name": "Brilliant Wizard Oil",
+            "itemId": 20749,
+            "duration": 60,
+            "persistsDeath": true,
+            "charges": 5
+        },
+        "2677": {
+            "name": "Superior Mana Oil",
+            "itemId": 22521,
+            "duration": 60,
+            "persistsDeath": true,
+            "charges": 5
+        },
+        "2678": {
+            "name": "Superior Wizard Oil",
+            "itemId": 22522,
+            "duration": 60,
+            "persistsDeath": true,
+            "charges": 5
+        },
+        "2718": {
+            "name": "Lesser Rune of Warding",
+            "itemId": 23559,
+            "duration": 60,
+            "persistsDeath": true
+        },
+        "2791": {
+            "name": "Greater Rune of Warding",
+            "itemId": 25521,
+            "duration": 60,
+            "persistsDeath": true
         }
     }
 }
