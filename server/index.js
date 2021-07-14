@@ -3,8 +3,14 @@ const app = express()
 const graphqlClient = require('graphql-client')
 const fetch = require('node-fetch')
 const path = require('path')
-const config = require('./config') || {}
 const port = process.env.PORT || 3001
+
+let config
+try {
+    config = require('./config') || {}
+} catch (e) {
+    console.log('config.json not found')
+}
 
 const {byEffectId: consumableEffects, byItemId: consumableItems} = require('../client/src/shared/consumables')
 
