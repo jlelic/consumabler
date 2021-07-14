@@ -5,7 +5,7 @@ const fetch = require('node-fetch')
 const path = require('path')
 const port = process.env.PORT || 3001
 
-let config
+let config = {}
 try {
     config = require('./config') || {}
 } catch (e) {
