@@ -107,7 +107,7 @@ export default function ConsumableCell({value, prices}) {
                             x {consumable.count} {consumableInfo.charges && <span className="consumable-detail-charges"> / {consumableInfo.charges}</span>} =
                         </div>
                         <div className='consumable-detail-total'>
-                            {price > 10000 && <span className="money-gold">{Math.floor(totalPrice / 10000)}</span>}
+                            {totalPrice > 10000 && <span className="money-gold">{Math.floor(totalPrice / 10000)}</span>}
                             <span className="money-silver">{Math.floor((totalPrice % 10000) / 100)}</span>
                             {/*<span className="money-copper">{Math.floor(price%100)}</span>*/}
                         </div>

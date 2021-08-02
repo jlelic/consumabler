@@ -121,7 +121,7 @@ const getPrices = async (server, faction) => {
     const prices = {}
     data.forEach(item => {
         if (consumableItems[item.itemId]) {
-            prices[item.itemId] = item.marketValue
+            prices[item.itemId] = (item.marketValue*2 + item.historicalValue) / 3
         }
     })
     return prices
@@ -312,20 +312,24 @@ app.get('/consumables_report/:code', async (req, res) => {
                         }
                     }
                 } else if (event.type === 'death') {
-                    const {targetID: playerId} = event
-                    const playerBuffs = buffs[playerId]
-                    if (!playerBuffs) {
-                        return
-                    }
-                    Object.keys(playerBuffs).forEach(buffId => {
-                        if(playerBuffs[buffId].isEnchant) {
-                            return
-                        }
-                        if (consumableEffects.buffs[buffId].persistsDeath) {
-                            return
-                        }
-                        playerBuffs[buffId].active = false
-                    })
+                    // const {targetID: playerId} = event
+                    // const playerBuffs = buffs[playerId]
+                    // if (!playerBuffs) {
+                    //     return
+                    // }
+                    // Object.keys(playerBuffs).forEach(buffId => {
+                    //     if(playerBuffs[buffId].isEnchant) {
+                    //         return
+                    //     }
+                    //     if (consumableEffects.buffs[buffId].persistsDeath) {
+                    //         return
+                    //     }
+                    //     if(buffId === 28497) {
+                    //         console.log('** death')
+                    //         console.log(buffs[playerId])
+                    //     }
+                    //     playerBuffs[buffId].active = false
+                    // })
                 } else {
                     console.log('EVENT')
                     console.log(event)

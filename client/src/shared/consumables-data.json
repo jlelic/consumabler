@@ -12,6 +12,18 @@
             "name": "Super Mana Potion",
             "itemId": 22832
         },
+        "4042": {
+            "name": "Superior Healing Potion",
+            "itemId": 3928
+        },
+        "17534": {
+            "name": "Major Healing Potion",
+            "itemId": 13446
+        },
+        "28495": {
+            "name": "Super Healing Potion",
+            "itemId": 22829
+        },
         "28517": {
             "name": "Super Rejuvenation Potion",
             "itemId": 22850
