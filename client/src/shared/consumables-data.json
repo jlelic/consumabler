@@ -73,6 +73,24 @@
         "9512": {
             "name": "Thistle Tea",
             "itemId": 7676
+        },
+        "41619": {
+            "name": "Cenarion Healing Salve",
+            "itemId": 32904,
+            "pricedBy": 32905
+        },
+        "41617": {
+            "name": "Cenarion Mana Salve",
+            "itemId": 32903,
+            "pricedBy": 32902
+        },
+        "41618": {
+            "name": "Bottled Nethergon Energy",
+            "itemId": 32902
+        },
+        "41620": {
+            "name": "Bottled Nethergon Vapor",
+            "itemId": 32905
         }
     },
     "buffs": {

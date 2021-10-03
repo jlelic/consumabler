@@ -66,7 +66,10 @@ export const roleInfo = {
         note: 'Mage - Caster DPS',
         order: 3
     },
-
+    'Paladin': {
+        note: 'Paladin - Flex',
+        order: 6
+    },
     'Paladin-Holy': {
         note: 'Paladin - Healer',
         order: 1
