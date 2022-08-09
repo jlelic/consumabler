@@ -15,7 +15,7 @@ function App() {
         <div className="App">
             <div className="container">
                 <div className='header'>
-                    <div className='alpha'>alpha</div>
+                    <div className='alpha'>beta</div>
                     <div className='expansion tbc'>TBC</div>
                     <LoadLogForm loadData={loadData} setLoading={setLoading}/>
                 </div>

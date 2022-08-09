@@ -12,7 +12,7 @@ export default () => {
 
     return <div className='disclaimer'>
         <div className='close-button' onClick={() => close(true)}/>
-        <strong>Disclaimer:</strong> The numbers presented on this website are just approximations and don't reflect
+        <strong>Disclaimer:</strong> The numbers presented on this website are just approximations and don't necessarily reflect
         the reality. Do not use them to judge your guildmates.
         <br/>
         <br/>

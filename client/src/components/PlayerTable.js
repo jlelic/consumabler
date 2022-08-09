@@ -490,7 +490,12 @@ export default function PlayerTable({data}) {
             {
                 Header: 'Role',
                 accessor: 'icon',
-                Cell: ({value}) => <div><img className={`role-icon role-${value}`} title={roleInfo[value].note}/></div>,
+                Cell: ({value}) => {
+                    console.log(value)
+                    console.log(roleInfo[value])
+                    debugger
+                    return <div><img className={`role-icon role-${value}`} title={roleInfo[value].note}/></div>
+                },
                 sortType: roleColSorter,
             },
             {
